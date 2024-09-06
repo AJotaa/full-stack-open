@@ -1,16 +1,11 @@
-export const Content = ({ data }) => {
-  const { part1, exercises1, part2, exercises2, part3, exercises3 } = data;
+export const Content = ({ parts }) => {
   return (
     <>
-      <p>
-        {part1} {exercises1}
-      </p>
-      <p>
-        {part2} {exercises2}
-      </p>
-      <p>
-        {part3} {exercises3}
-      </p>
+      {parts.map((e) => (
+        <p>
+          {e.name} {e.exercises}
+        </p>
+      ))}
     </>
   );
 };

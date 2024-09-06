@@ -1,4 +1,4 @@
-export const Total = ({data}) => {
-  const { exercises1, exercises2, exercises3 } = data;
-  return <p>Number of exercises {exercises1 + exercises2 + exercises3}</p>;
+export const Total = ({ parts }) => {
+  const totalValue = parts.reduce((acc, curr) => acc + curr.exercises, 0);
+  return <p>Number of exercises {totalValue}</p>;
 };
